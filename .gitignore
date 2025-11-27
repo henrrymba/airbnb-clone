@@ -1,0 +1,19 @@
+
+.DS_Store
+.vscode/
+.idea/
+.env # CRUCIAL: No subir variables de entorno (Auth0, DB creds)
+
+/backend/target/
+/backend/*.iml
+/backend/*.ipr
+/backend/nohup.out
+/backend/build/
+/backend/.gradle/
+
+/frontend/node_modules/
+/frontend/dist/
+/frontend/tmp/
+/frontend/.angular/
+
+*.log
