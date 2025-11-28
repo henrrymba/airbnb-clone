@@ -1,30 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
 @import 'tailwindcss';
 
-/* PrimeNG Theme + Icons */
-/* @import 'primeng/resources/themes/aura-light-indigo/theme.css'; */
-/* @import 'primeng/resources/primera/resources/primeng.css'; */
-@import 'primeicons/primeicons.css';
-
 @theme {
-  --color-primary: #ff385c;
-  --color-primary-dark: #e0073d;
-  --color-primary-light: #ff5a7d;
-
-  --color-gray-50: #fafafa;
-  --color-gray-100: #f5f5f5;
-  --color-gray-200: #eeeeee;
-  --color-gray-300: #e0e0e0;
-  --color-gray-600: #757575;
-  --color-gray-900: #222222;
-
-  --font-sans: 'Circular Airbnb', system-ui, sans-serif;
+  --color-airbnb: #ff385c;
+  --font-nunito: 'Nunito Sans', sans-serif;
 }
 
-/* Reset global */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Circular Airbnb', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+@utility col-center {
+  @apply flex flex-col items-center justify-center;
+}
+
+@utility abs-center {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+@layer base {
+  html,
+  body {
+    @apply h-full w-full;
+    font-family: var(--font-nunito);
+  }
+}
+
+@layer components {
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+  .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
