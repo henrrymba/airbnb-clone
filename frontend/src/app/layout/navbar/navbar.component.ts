@@ -52,7 +52,7 @@ import { AIRBNB_IMAGE_URL } from '../../shared/constants';
                 <div class="h-[2px] w-full bg-black mt-1"></div>
               </div>
 
-              <div
+              <!-- <div
                 class="flex flex-col items-center gap-1 cursor-pointer opacity-60 hover:opacity-100 transition group relative"
               >
                 <div class=" group-hover:bg-neutral-50 rounded-full md:bg-transparent">
@@ -72,7 +72,7 @@ import { AIRBNB_IMAGE_URL } from '../../shared/constants';
                 <span class="text-sm font-medium text-neutral-500 group-hover:text-neutral-800"
                   >Services</span
                 >
-              </div>
+              </div> -->
             </div>
 
             <!-- Compact Search -->
@@ -473,7 +473,7 @@ import { AIRBNB_IMAGE_URL } from '../../shared/constants';
             [ngClass]="guestCounts[type] === 0 ? 'opacity-20 cursor-not-allowed' : 'cursor-pointer'"
             [disabled]="guestCounts[type] === 0"
           >
-            <span class="material-icons text-xs">remove</span>
+            <span class="material-icons text-xs" style="font-size: 20px;">remove</span>
           </button>
           <span class="w-6 text-center text-sm text-neutral-800 tabular-nums">{{
             guestCounts[type]
@@ -482,7 +482,7 @@ import { AIRBNB_IMAGE_URL } from '../../shared/constants';
             (click)="updateGuests(type, 'inc')"
             class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:border-black transition cursor-pointer"
           >
-            <span class="material-icons text-xs">add</span>
+            <span class="material-icons text-xs" style="font-size: 20px;">add</span>
           </button>
         </div>
       </div>

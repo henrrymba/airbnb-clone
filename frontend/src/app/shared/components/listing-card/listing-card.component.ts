@@ -1,13 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { Listing } from '../../types';
 
 @Component({
   selector: 'app-listing-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   template: `
-    <div class="w-full cursor-pointer group relative">
+    <div [routerLink]="['/listings', data.id]" class="w-full cursor-pointer group relative">
       <div class="flex flex-col w-full">
         <!-- Image -->
         <div class="aspect-square w-full relative overflow-hidden rounded-xl bg-gray-200">
